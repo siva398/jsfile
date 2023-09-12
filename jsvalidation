@@ -25,3 +25,15 @@ function isNumber(evt) {
     }
     return true;
 }
+//------------jquery using file upload-----------------
+var files = $("#" + id).prop('files')[0];
+ var fd = new FormData();
+fd.append('file', files);
+fd.append('module', splitid[1]);
+fd.append('logoid', splitid[2]);
+fd.append('propid', $('#prop-select').val());
+fd.append('description', $('#logorepkey-' + splitid[1] + "-" + splitid[2]).val());
+fd.append('updatefunc', '1');
+fd.append('logoname',$("#logopath-" + splitid[1] + "-" + splitid[2]).val());
+fd.append('logorepdesc',$("#logodescription-" + splitid[1] + "-" + splitid[2]).text());
+//----------------------------------------------------------------------------
